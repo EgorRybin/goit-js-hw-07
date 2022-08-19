@@ -15,17 +15,6 @@ const listItem = galleryItems
   .join("");
 
 galleryRef.innerHTML = listItem;
-galleryRef.querySelectorAll(".gallery__image");
-
-const onImageClick = function (event) {
-  event.preventDefault();
-
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-};
-
-galleryRef.addEventListener("click", onImageClick);
 
 const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
